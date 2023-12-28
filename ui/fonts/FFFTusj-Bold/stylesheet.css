@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'FFF Tusj';
+    src: url('FFFTusj-Bold.woff2') format('woff2'),
+        url('FFFTusj-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+

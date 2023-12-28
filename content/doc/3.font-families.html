@@ -1,0 +1,28 @@
+---
+title: Fontes
+description: Design tokens  des fontes
+layout: libdoc/page-codemirror
+category: Design tokens
+order: 130
+briks_font_families:
+    - "sketch-1"
+    - "sketch-2"
+    - "lead-1"
+    - "lead-2"
+---
+<div class="
+    briks-font-families
+    c-dim m-p-10 m-m-auto" 
+    style="max-width: 50ch">
+    {% for name in page.briks_font_families %}
+    <p class="
+        c-txt m-ff-{{name}}
+        c-dim m-mb-10">
+        <span class="c-txt m-fs-12">{{name}}</span><br>
+        <code class="c-txt m-fs-4" style="font-weight: normal;">var(--ita-font-family-{{name}})</code><br><br>
+        Erat dolore et dolore magna et. 
+        Gubergren dolore voluptua erat diam. 
+        Voluptua sit labore lorem sea kasd accusam. 
+        Lorem amet.<br>
+    </p>{% endfor %}
+</div>

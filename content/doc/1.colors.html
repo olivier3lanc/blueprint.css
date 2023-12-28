@@ -1,0 +1,29 @@
+---
+title: Couleurs
+description: Design tokens des couleurs
+layout: libdoc/page-codemirror
+category: Design tokens
+order: 110
+colors:
+    - "blue"
+---
+<div class="
+    briks-colors
+    c-dis m-flex m-column m-gap-9
+    c-dim m-p-10
+    c-txt m-ff-lead-1 m-fs-4"
+    style="background-color: ghostwhite">
+    {% for color in page.colors %}
+        <div class="c-dis m-flex m-column m-gap-7">
+            {% for i in (1..9) %}
+            <div class="
+                c-dis m-flex m-column m-gap-1">
+                <div class="
+                    c-skin m-bc-{{color}}-{{i}}00
+                    c-dim m-p-4"></div>
+                <div>{{color}}-{{i}}00 <br>var(--ita-color-{{color}}-{{i}}00) <br><span></span></div>
+            </div>
+            {% endfor %}
+        </div>
+    {% endfor %}
+</div>

@@ -1,0 +1,24 @@
+:root {
+    --bp-unit-width: 20px;
+    --bp-units-per-group: 5;
+    --bp-units-line-width: 1px;
+    --bp-groups-line-width: 1px;
+    --bp-background-color: var(--ita-color-blue-700);
+    --bp-groups-bounds-color: var(--ita-color-blue-400);
+    --bp-units-bounds-color: var(--ita-color-blue-500);
+    /* Internal */
+    --bp-group: calc(var(--bp-unit-width) * var(--bp-units-per-group));
+}
+body {
+    color: white;
+    background-color: var(--bp-background-color);
+    box-shadow: inset 0px 0px 50vmin 0 black;
+    min-height: 100vh;
+    background-image:
+        linear-gradient(var(--bp-groups-bounds-color) var(--bp-groups-line-width), transparent var(--bp-groups-line-width)),
+        linear-gradient(90deg, var(--bp-groups-bounds-color) var(--bp-groups-line-width), transparent var(--bp-groups-line-width)),
+        linear-gradient(var(--bp-units-bounds-color) var(--bp-units-line-width), transparent var(--bp-units-line-width)),
+        linear-gradient(90deg, var(--bp-units-bounds-color) var(--bp-units-line-width), transparent var(--bp-units-line-width));
+    background-size: calc(var(--bp-units-per-group) * var(--bp-unit-width)) calc(var(--bp-units-per-group) * var(--bp-unit-width)), calc(var(--bp-units-per-group) * var(--bp-unit-width)) calc(var(--bp-units-per-group) * var(--bp-unit-width)), var(--bp-unit-width) var(--bp-unit-width), var(--bp-unit-width) var(--bp-unit-width);
+    /* background-position: -1px -1px, -1px -1px; */
+}

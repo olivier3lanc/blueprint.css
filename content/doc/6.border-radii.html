@@ -1,0 +1,19 @@
+---
+title: Arrondis
+description: Design tokens des arrondis
+layout: libdoc/page-codemirror
+category: Design tokens
+order: 170
+---
+<div class="
+    briks-border-radius
+    c-dis m-flex m-column m-gap-3
+    c-dim m-m-10
+    c-txt m-ff-lead-1">
+    {% for i in (0..4) %}
+    <div class="
+        c-skin m-bradtl-{{i}}
+        c-dim m-pl-6 m-pt-6" style="border-left: 3px solid fuchsia; border-top: 3px solid fuchsia">
+        Arrondi {{i}} | var(--ita-border-radius-{{i}}) | <span></span>
+    </div>{% endfor %}
+</div>

@@ -1,0 +1,60 @@
+/*
+    C-DIS EXTENSION
+    Extension du composant générique c-dis
+    https://github.com/ita-design-system/c-dis.scss
+    Ce fichier doit servir à étendre ou surcharger les fonctionnalités
+    du composant c-dis selon les besoins du projet
+*/
+$briks-components-generic: (
+    // Nom du composant, obligatoirement flex
+    dis: ( // Extension activée true ou false
+        enabled: true,
+        // Responsive activée true ou false pour l'extension
+        responsive: true,
+        // Valeurs par défaut de l'extension
+        defaults: (),
+        // Liste des modifieurs contenant chacun une liste de propriétés qui 
+        // soit surchargent les propriétés par défaut
+        // soit ajoutent des propriétés
+        // soit les deux
+        modifiers: ( // Gap
+            // Surcharge de la variable CSS --ita-gap pour compatibilité avec c-dim
+            gap-1: (
+                --ita-gap: my-spacing(1)
+            ),
+            gap-2: (
+                --ita-gap: my-spacing(2)
+            ),
+            gap-3: (
+                --ita-gap: my-spacing(3)
+            ),
+            gap-4: (
+                --ita-gap: my-spacing(4)
+            ),
+            gap-5: (
+                --ita-gap: my-spacing(5)
+            ),
+            gap-6: (
+                --ita-gap: my-spacing(6)
+            ),
+            gap-7: (
+                --ita-gap: my-spacing(7)
+            ),
+            gap-8: (
+                --ita-gap: my-spacing(8)
+            ),
+            gap-9: (
+                --ita-gap: my-spacing(9)
+            ),
+            gap-10: (
+                --ita-gap: my-spacing(10)
+            ),
+            gap-11: (
+                --ita-gap: my-spacing(11)
+            ),
+            gap-12: (
+                --ita-gap: my-spacing(12)
+            ),
+        )
+    )
+);

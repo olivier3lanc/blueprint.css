@@ -1,0 +1,289 @@
+/*
+    C-SKIN EXTENSION
+    Extension du composant générique c-skin
+    https://github.com/ita-design-system/c-skin.scss
+    Ce fichier doit servir à étendre ou surcharger les fonctionnalités
+    du composant c-dim selon les besoins du projet
+*/
+$briks-components-generic: (
+    // Nom du composant, obligatoirement skin
+    skin: ( 
+        // Extension activée true ou false
+        enabled: true, 
+        // Responsive activée true ou false pour l'extension
+        responsive: false, 
+        // Valeurs par défaut de l'extension
+        defaults: (
+            pseudo-classes: (
+                // c-skin:disabled
+                disabled: (
+                    pointer-events: none,
+                    color: grey,
+                    background-color: lightgrey
+                )
+            )
+        ),
+        // Liste des modifieurs contenant chacun une liste de propriétés qui 
+        // soit surchargent les propriétés par défaut
+        // soit ajoutent des propriétés
+        // soit les deux
+        modifiers: (
+
+            // BACKGROUND
+            bg-search-left: (
+                background: left my-spacing(3) top 50% / my-font-size(6) no-repeat url('../medias/search_line.svg')
+            ),
+            bg-select: (
+                background: right my-spacing(4) top 50% / my-font-size(2) no-repeat white url('../medias/chevron_down.svg')
+            ),
+
+            // BORDER WIDTHS
+            bwidth-4: (
+                border-width: 4px
+            ),
+            bwidth-5: (
+                border-width: 5px
+            ),
+            bwidth-6: (
+                border-width: 6px
+            ),
+
+            // BORDER COLORS
+            bcolor-blue-100: (
+                border-color: my-color(blue-100)
+            ),
+            bcolor-blue-200: (
+                border-color: my-color(blue-200)
+            ),
+            bcolor-blue-300: (
+                border-color: my-color(blue-300)
+            ),
+            bcolor-blue-400: (
+                border-color: my-color(blue-400)
+            ),
+            bcolor-blue-500: (
+                border-color: my-color(blue-500)
+            ),
+            bcolor-blue-600: (
+                border-color: my-color(blue-600)
+            ),
+            bcolor-blue-700: (
+                border-color: my-color(blue-700)
+            ),
+            bcolor-blue-800: (
+                border-color: my-color(blue-800)
+            ),
+            bcolor-blue-900: (
+                border-color: my-color(blue-900)
+            ),
+
+            bcolor-white: (
+                border-color: white
+            ),
+
+            bcolor-black: (
+                border-color: black
+            ),
+
+            // c-skin m-checkbox-1
+            checkbox-1: (
+                pseudo-elements: (
+                    before: (
+                        selector: '+*',
+                        content: '',
+                        border-width: 1px,
+                        border-style: solid,
+                        border-color: my-color(blue-800),
+                        background-color: white,
+                        border-radius: my-border-radius(1)
+                    )
+                ),
+                pseudo-classes: (
+                    disabled: (
+                        selector: '+*',
+                        opacity: 0.3
+                    ),
+                    checked: (
+                        selector: '+*',
+                        pseudo-elements: (
+                            before: (
+                                border-color: my-color(orange-500),
+                                background: center / 60% no-repeat url('../medias/checkbox_check.svg')
+                            )
+                        )
+                    )
+                )
+            ),
+            // c-skin m-radio-1
+            radio-1: (
+                pseudo-elements: (
+                    before: (
+                        selector: '+*',
+                        content: '',
+                        border-width: 1px,
+                        border-style: solid,
+                        border-color: my-color(blue-800),
+                        background: white,
+                        border-radius: 100%
+                    )
+                ),
+                pseudo-classes: (
+                    disabled: (
+                        selector: '+*',
+                        opacity: 0.3
+                    ),
+                    checked: (
+                        selector: '+*',
+                        pseudo-elements: (
+                            before: (
+                                border-color: my-color(orange-500),
+                                background: radial-gradient(circle, my-color(orange-500) 37%, white 42%, white 100%)
+                            )
+                        )
+                    )
+                )
+            ),
+            // c-skin m-disabled
+            disabled: (
+                pointer-events: none,
+                color: grey,
+                background-color: lightgrey
+            ),
+            // COLORS
+            c-blue-100: (
+                color: my-color(blue-100)
+            ),
+            c-blue-200: (
+                color: my-color(blue-200)
+            ),
+            c-blue-300: (
+                color: my-color(blue-300)
+            ),
+            c-blue-400: (
+                color: my-color(blue-400)
+            ),
+            c-blue-500: (
+                color: my-color(blue-500)
+            ),
+            c-blue-600: (
+                color: my-color(blue-600)
+            ),
+            c-blue-700: (
+                color: my-color(blue-700)
+            ),
+            c-blue-800: (
+                color: my-color(blue-800)
+            ),
+            c-blue-900: (
+                color: my-color(blue-900)
+            ),
+            c-white: (
+                color: white
+            ),
+            c-black: (
+                color: black
+            ),
+            // BACKGROUND COLOR
+            bc-blue-100: (
+                background-color: my-color(blue-100)
+            ),
+            bc-blue-200: (
+                background-color: my-color(blue-200)
+            ),
+            bc-blue-300: (
+                background-color: my-color(blue-300)
+            ),
+            bc-blue-400: (
+                background-color: my-color(blue-400)
+            ),
+            bc-blue-500: (
+                background-color: my-color(blue-500)
+            ),
+            bc-blue-600: (
+                background-color: my-color(blue-600)
+            ),
+            bc-blue-700: (
+                background-color: my-color(blue-700)
+            ),
+            bc-blue-800: (
+                background-color: my-color(blue-800)
+            ),
+            bc-blue-900: (
+                background-color: my-color(blue-900)
+            ),
+            bc-white: (
+                background-color: white
+            ),
+            bc-black: (
+                background-color: black
+            ),
+            brad-1: (
+                border-radius: my-border-radius(1)
+            ),
+            brad-2: (
+                border-radius: my-border-radius(2)
+            ),
+            brad-3: (
+                border-radius: my-border-radius(3)
+            ),
+            brad-4: (
+                border-radius: my-border-radius(4)
+            ),
+            bradtl-1: (
+                border-top-left-radius: my-border-radius(1)
+            ),
+            bradtl-2: (
+                border-top-left-radius: my-border-radius(2)
+            ),
+            bradtl-3: (
+                border-top-left-radius: my-border-radius(3)
+            ),
+            bradtl-4: (
+                border-top-left-radius: my-border-radius(4)
+            ),
+            bradtr-1: (
+                border-top-right-radius: my-border-radius(1)
+            ),
+            bradtr-2: (
+                border-top-right-radius: my-border-radius(2)
+            ),
+            bradtr-3: (
+                border-top-right-radius: my-border-radius(3)
+            ),
+            bradtr-4: (
+                border-top-right-radius: my-border-radius(4)
+            ),
+            bradbr-1: (
+                border-bottom-right-radius: my-border-radius(1)
+            ),
+            bradbr-2: (
+                border-bottom-right-radius: my-border-radius(2)
+            ),
+            bradbr-3: (
+                border-bottom-right-radius: my-border-radius(3)
+            ),
+            bradbr-4: (
+                border-bottom-right-radius: my-border-radius(4)
+            ),
+            bradbl-1: (
+                border-bottom-left-radius: my-border-radius(1)
+            ),
+            bradbl-2: (
+                border-bottom-left-radius: my-border-radius(2)
+            ),
+            bradbl-3: (
+                border-bottom-left-radius: my-border-radius(3)
+            ),
+            bradbl-4: (
+                border-bottom-left-radius: my-border-radius(4)
+            ),
+            // BOX SHADOWS
+            bs-1: (
+                box-shadow: my-shadow(1)
+            ),
+            bs-2: (
+                box-shadow: my-shadow(2)
+            )
+        )
+    )
+);

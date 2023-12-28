@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'HelloEtchASketch';
+    src: url('HelloEtchASketch.woff2') format('woff2'),
+        url('HelloEtchASketch.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'KG Broken Vessels Sketch';
+    src: url('KGBrokenVesselsSketch.woff2') format('woff2'),
+        url('KGBrokenVesselsSketch.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

@@ -1,0 +1,25 @@
+/*
+    C-POS EXTENSION
+    Extension du composant générique c-pos
+    https://github.com/ita-design-system/c-pos.scss
+    Ce fichier doit servir à étendre ou surcharger les fonctionnalités
+    du composant c-pos selon les besoins du projet
+*/
+$briks-components-generic: (
+    // Nom du composant, obligatoirement pos
+    pos: ( 
+        // Extension activée true ou false
+        enabled: true, 
+        // Responsive activée true ou false pour l'extension
+        responsive: true, 
+        // Valeurs par défaut de l'extension
+        defaults: (),
+        // Liste des modifieurs contenant chacun une liste de propriétés qui 
+        // soit surchargent les propriétés par défaut
+        // soit ajoutent des propriétés
+        // soit les deux
+        modifiers: ( 
+            // Ajout de valeurs de propriétés liées aux design tokens d'espacements
+        )
+    )
+);

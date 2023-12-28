@@ -1,0 +1,76 @@
+---
+title: Select
+description: Éléments de formulaires select
+layout: libdoc/page-codemirror
+category: Formulaires
+order: 500
+---
+<form>
+    <fieldset class="
+        c-dis m-flex m-column m-gap-6 m-cross-start
+        c-skin m-brad-1 
+        c-txt m-fs-5 m-ff-lead-1
+        c-dim m-p-6 m-m-auto m-mt-12"
+        style="max-width: 40ch;">
+        <legend class="
+            c-skin m-c-primary-500 
+            c-txt m-fs-3">Exemples de select</legend>
+        <div class="
+            c-dis m-flex m-column-reverse
+            c-dim m-w-12t">
+            <select 
+                id="select1"
+                class="nice-select2">
+                <option value="1">Select option 1</option>
+                <option value="2">Select option 2</option>
+                <option value="3">Select option 3</option>
+            </select>
+            <label for="select1"
+                class="
+                c-dis m-flex m-main-space-between m-cross-end
+                c-txt m-fs-2
+                c-dim m-mb-1">
+                Label select 1
+            </label>
+        </div>
+        <div class="
+            c-dis m-flex m-column-reverse
+            c-dim m-w-12t">
+            <select 
+                id="select2"
+                class="nice-select2 wide">
+                <option value="1">Select option 1</option>
+                <option value="2">Select option 2</option>
+                <option value="3">Select option 3</option>
+            </select>
+            <label for="select2"
+                class="
+                c-dis m-flex m-main-space-between m-cross-end
+                c-txt m-fs-2
+                c-dim m-mb-1">
+                Label select wide
+            </label>
+        </div>
+        <div class="
+            c-dis m-flex m-column-reverse
+            c-dim m-w-12t">
+            <select multiple
+                id="select3"
+                class="nice-select2 wide"
+                data-ns-searchable="true"
+                data-ns-selectedtext="options sélectionnées"
+                data-ns-placeholder="Texte personnalisé">
+                <option value="1">Selection multiple option 1</option>
+                <option value="2">Selection multiple option 2</option>
+                <option value="3">Selection multiple option 3</option>
+            </select>
+            <label for="select3"
+                class="
+                c-dis m-flex m-main-space-between m-cross-end
+                c-txt m-fs-2
+                c-dim m-mb-1">
+                Label select wide multiple
+            </label>
+        </div>
+    </fieldset>
+</form>

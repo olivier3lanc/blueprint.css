@@ -1,0 +1,78 @@
+/*
+    C-TXT EXTENSION
+    Extension du composant générique c-txt
+    https://github.com/ita-design-system/c-txt.scss
+    Ce fichier doit servir à étendre ou surcharger les fonctionnalités
+    du composant c-txt selon les besoins du projet
+*/
+$briks-components-generic: (
+    // Nom du composant, obligatoirement txt
+    txt: ( 
+        // Extension activée true ou false
+        enabled: true, 
+        // Responsive activée true ou false pour l'extension
+        responsive: true, 
+        // Valeurs par défaut de l'extension
+        defaults: (),
+        // Liste des modifieurs contenant chacun une liste de propriétés qui 
+        // soit surchargent les propriétés par défaut
+        // soit ajoutent des propriétés
+        // soit les deux
+        modifiers: ( 
+            // FONT SIZE
+            fs-12: (
+                font-size: my-font-size(12)
+            ),
+            fs-11: (
+                font-size: my-font-size(11)
+            ),
+            fs-10: (
+                font-size: my-font-size(10)
+            ),
+            fs-9: (
+                font-size: my-font-size(9)
+            ),
+            fs-8: (
+                font-size: my-font-size(8)
+            ),
+            fs-7: (
+                font-size: my-font-size(7)
+            ),
+            fs-6: (
+                font-size: my-font-size(6)
+            ),
+            fs-5: (
+                font-size: my-font-size(5)
+            ),
+            fs-4: (
+                font-size: my-font-size(4)
+            ),
+            fs-3: (
+                font-size: my-font-size(3)
+            ),
+            fs-2: (
+                font-size: my-font-size(2)
+            ),
+            fs-1: (
+                font-size: my-font-size(1)
+            ),
+            // FONT FAMILIES
+            ff-sketch-1: (
+                font-family: my-font-family(sketch-1),
+                font-weight: 400
+            ),
+            ff-sketch-2: (
+                font-family: my-font-family(sketch-2),
+                font-weight: 400
+            ),
+            ff-lead-1: (
+                font-family: my-font-family(lead-1),
+                font-weight: 300
+            ),
+            ff-lead-2: (
+                font-family: my-font-family(lead-2),
+                font-weight: 700
+            ),
+        )
+    )
+);

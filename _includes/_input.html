@@ -1,0 +1,61 @@
+{% assign min = 1 %}
+{% assign max = 2000 %}
+{% assign diff = max | minus: min %}
+{% assign randomNumber = "now" | date: "%N" | modulo: diff | plus: min | prepend: 'id_' %}
+<!-- type="{{include.data.type|default:'text'}}" -->
+<div class="
+    c-dis m-flex m-column
+    c-dim m-w-12t">
+    {% if include.data.type == 'password' %}
+        <div class="c-pos m-relative">
+            <input type="checkbox" 
+                id="{{include.data.id|default:randomNumber}}_pwd" 
+                class="
+                c-pos m-absolute 
+                c-skin m-opa-0"
+                onchange="cForms.togglePasswordView(this)">
+            <label for="{{include.data.id|default:randomNumber}}_pwd"
+                class="
+                c-dis m-flex
+                c-pos m-absolute m-top-0 m-right-0
+                c-dim m-p-3
+                c-txt m-fs-6
+                c-skin m-cur-pointer"
+                title="Afficher ou masquer le mot de passe">
+                <span class="icon-eye_line"></span>
+            </label>
+        </div>
+    {% endif %}
+    <input type="{{include.data.type|default:'text'}}" 
+        id="{{include.data.id|default:randomNumber}}"
+        value="{{include.data.value}}"
+        class="
+        {{include.data.class|default:'c-form
+        c-dim m-pt-3 m-pr-4 m-pb-3 m-pl-4 
+        c-txt m-ff-lead-1 m-fs-3
+        c-skin m-bwidth-1 m-bstyle-solid m-color-scheme-1 m-color-scheme-1-ext-1 m-color-scheme-1-ext-2 m-brad-2 m-transition-1'}}"
+        {% if include.data.pattern %}
+            pattern="{{include.data.pattern}}"
+        {% endif %}
+        placeholder="{{include.data.placeholder|default:'Placeholder'}}"
+        {% for event in include.data.events %}
+            on{{event.type}}="{{event.value}}"
+        {% endfor %}
+        {% if include.data.required %}required{% endif %} 
+        {% if include.data.disabled %}disabled{% endif %}>
+    <label for="{{include.data.id|default:randomNumber}}"
+        class="
+        c-dis m-flex
+        c-dim m-order--1 m-mb-1
+        c-txt m-fs-2 m-ff-lead-1">
+        {{include.data.label|default:'Label'}}
+    </label>
+    <span class="
+        c-dis m-flex m-gap-1 m-cross-center
+        c-dim m-mt-1
+        c-txt m-fs-2 
+        c-skin m-c-blue-700">
+        <span class="c-txt m-ff-icomoon m-fs-4 hint"></span> 
+        {{include.data.hint|default:'Hint'}}
+    </span>
+</div>
