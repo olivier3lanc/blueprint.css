@@ -5,51 +5,34 @@ layout: libdoc/page-codemirror
 category: Formulaires
 order: 500
 ---
-<fieldset class="
-    c-dis m-flex m-column m-gap-1 
-    c-txt m-ff-lead-400
-    c-skin m-b-7 m-brad-1 
-    c-dim m-mt-10 m-m-auto m-p-6"
-    style="max-width: 40ch">
-    <legend class="
-        c-skin m-c-primary-500 
-        c-txt m-fs-3">
-        Légende
-    </legend>
-    {% for i in (1..4) %}
-    <div class="c-dis m-flex">
-        <input type="radio" {% if forloop.last %}disabled{% endif %}
-            id="radio{{i}}" 
-            name="myradio" 
-            class="c-dis c-dim c-pos m-absolute c-skin m-radio-1 m-opa-0">
-        <label for="radio{{i}}" 
-            class="
-            c-dis m-flex m-cross-center m-gap-3
-            c-txt m-ff-lead-400">
-            Radio {{i}}
-        </label>
-    </div>
-    {% endfor %}
-
-    <div class="c-dis m-flex">
-        {% for i in (1..3) %}
-        <div>
-            <input type="radio"
-                id="radio_badge_{{i}}" 
-                name="radio_badge_1" 
-                class="c-dis c-dim c-pos m-absolute c-skin m-input-badge-1 m-opa-0">
-            <label for="radio_badge_{{i}}"
+<div class="
+    c-dis m-flex m-main-center
+    c-dim m-p-10">
+    <fieldset class="
+        c-dis m-flex m-column m-gap-2 m-cross-start
+        c-dim m-p-6
+        c-txt m-ff-lead-400
+        c-skin m-bimage-2 m-bs-1"
+        style="max-width: 60ch">
+        <legend class="
+            c-dim m-pl-2 m-pr-2 m-pt-1 m-pb-1
+            c-txt m-ff-sketch-2 m-fs-4
+            c-skin m-bimage-1 m-bg-white-stripes-2 m-bc-black">
+            Radios
+        </legend>
+        {% for i in (1..4) %}
+        <div class="c-dis m-flex">
+            <input type="radio" {% if forloop.last %}disabled{% endif %}
+                id="radio{{i}}" 
+                name="myradio" 
+                class="c-dis c-dim c-pos m-absolute c-skin m-radio-1 m-opa-0">
+            <label for="radio{{i}}" 
                 class="
-                c-dis m-flex m-cross-center m-gap-1
-                c-dim m-p-3
-                c-txt m-ff-lead-400 m-fs-3
-                c-skin m-c-blue-900 m-bstyle-solid m-bwidth-1 m-bcolor-blue-800
-                {% if forloop.first %}m-bradtl-10 m-bradbl-10{% endif %}
-                {% if forloop.last %}m-bradtr-10 m-bradbr-10{% endif %}">
-                <span class="icon-car_line"></span>
-                Voiture {{i}}
+                c-dis m-flex m-cross-center m-gap-3
+                c-txt m-ff-lead-400">
+                Radio {{i}} ready to be checked
             </label>
         </div>
         {% endfor %}
-    </div>
-</fieldset>
+    </fieldset>
+</div>

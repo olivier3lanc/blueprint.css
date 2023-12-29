@@ -5,106 +5,35 @@ layout: libdoc/page-codemirror
 category: Formulaires
 order: 500
 ---
-<fieldset class="
-    c-dis m-flex m-column m-gap-2
-    c-txt m-ff-lead-400
-    c-skin m-b-7 m-brad-1 
-    c-dim m-mt-10 m-m-auto m-p-6"
-    style="max-width: 60ch">
-    <legend class="
-        c-skin m-c-primary-500 
-        c-txt m-fs-3">
-        Checkbox standards
-    </legend>
-    {% for i in (1..4) %}
-    <div class="c-dis m-flex">
-        <input type="checkbox" {% if forloop.last %}disabled{% endif %}
-            id="checkbox{{i}}" 
-            name="mycheckbox" 
-            class="c-dis c-dim c-pos m-absolute c-skin m-checkbox-1 m-opa-0">
-        <label for="checkbox{{i}}" 
-            class="
-            c-dis m-flex m-cross-center m-gap-3
-            c-txt m-ff-lead-400">
-            Checkbox {{i}}
-        </label>
-    </div>
-    {% endfor %}
-</fieldset>
+<div class="
+    c-dis m-flex m-main-center
+    c-dim m-p-10">
 
-<fieldset class="
-    c-dis m-flex m-column m-gap-10
-    c-txt m-ff-lead-400
-    c-skin m-b-7 m-brad-1 
-    c-dim m-mt-10 m-m-auto m-p-6"
-    style="max-width: 60ch">
-    <legend class="
-        c-skin m-c-primary-500 
-        c-txt m-fs-3">
-        Checkboxes badges rattachés
-    </legend>
-
-    <div class="c-dis m-flex">
-        {% for i in (1..3) %}
-        <div>
-            <input type="checkbox"
-                id="checkbox_badge_r_{{i}}" 
-                name="checkbox_badge_r" 
-                class="c-dis c-dim c-pos m-absolute c-skin m-input-badge-1 m-opa-0">
-            <label for="checkbox_badge_r_{{i}}"
+    <fieldset class="
+        c-dis m-flex m-column m-gap-2 m-cross-start
+        c-dim m-p-6
+        c-txt m-ff-lead-400
+        c-skin m-bimage-2 m-bs-1"
+        style="max-width: 60ch">
+        <legend class="
+            c-dim m-pl-2 m-pr-2 m-pt-1 m-pb-1
+            c-txt m-ff-sketch-2 m-fs-4
+            c-skin m-bimage-1 m-bg-white-stripes-2 m-bc-black">
+            Checkboxes
+        </legend>
+        {% for i in (1..4) %}
+        <div class="c-dis m-flex">
+            <input type="checkbox" {% if forloop.last %}disabled{% endif %}
+                id="checkbox{{i}}" 
+                name="mycheckbox" 
+                class="c-dis c-dim c-pos m-absolute c-skin m-checkbox-1 m-opa-0">
+            <label for="checkbox{{i}}" 
                 class="
-                c-dis m-flex m-cross-center m-gap-1
-                c-dim m-p-3
-                c-txt m-ff-lead-400 m-fs-3
-                c-skin m-c-blue-900 m-bstyle-solid m-bwidth-1 m-bcolor-blue-400
-                {% if forloop.first %}m-bradtl-10 m-bradbl-10{% endif %}
-                {% if forloop.last %}m-bradtr-10 m-bradbr-10{% endif %}">
-                <span class="icon-car_line"></span>
-                Voiture {{i}}
+                c-dis m-flex m-cross-center m-gap-3
+                c-txt m-ff-lead-400">
+                Checkbox {{i}} ready to be checked
             </label>
         </div>
         {% endfor %}
-    </div>
-</fieldset>
-
-
-<fieldset class="
-    c-dis m-flex m-column m-gap-10
-    c-txt m-ff-lead-400
-    c-skin m-b-7 m-brad-1 
-    c-dim m-mt-10 m-m-auto m-p-6"
-    style="max-width: 60ch">
-    <legend class="
-        c-skin m-c-primary-500 
-        c-txt m-fs-3">
-        Checkboxes badges séparés
-    </legend>
-    <div class="c-dis m-flex m-gap-3">
-        {% for i in (1..3) %}
-        <div class="c-pos m-relative">
-            <input type="checkbox"
-                id="checkbox_badge_s_{{i}}" 
-                name="checkbox_badge_s" 
-                class="c-dis c-dim c-pos m-absolute c-skin m-input-badge-1 m-input-badge-1-ext-1 m-opa-0">
-            <label for="checkbox_badge_s_{{i}}"
-                class="
-                c-dis m-flex m-cross-center
-                c-dim m-pl-3 m-pt-3 m-pr-9 m-pb-3
-                c-txt m-ff-lead-400 m-fs-3
-                c-skin m-c-blue-900 m-bstyle-solid m-bwidth-1 m-bcolor-blue-500 m-brad-10">
-                Choix {{i}}
-            </label>
-            <a  href="#!"
-                title="Infobulle {{i}}"
-                class="
-                c-dis m-flex m-cross-center m-main-center
-                c-pos m-absolute m-top-0 m-right-0
-                c-dim m-h-100 m-pl-3 m-pr-3
-                c-txt m-td-none
-                c-skin m-bc-0 m-c-blue-900 m-blwidth-1 m-blstyle-solid m-bcolor-blue-500">
-                <span class="icon-information_line"></span>
-            </a>
-        </div>
-        {% endfor %}
-    </div>
-</fieldset>
+    </fieldset>
+</div>

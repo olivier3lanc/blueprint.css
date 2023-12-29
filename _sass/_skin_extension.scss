@@ -147,24 +147,22 @@ $briks-components-generic: (
                     before: (
                         selector: '+*',
                         content: '',
-                        border-width: 1px,
-                        border-style: solid,
-                        border-color: my-color(blue-800),
-                        background-color: white,
-                        border-radius: my-border-radius(1)
+                        background: center/100% no-repeat url('../medias/icon_square.svg')
                     )
                 ),
                 pseudo-classes: (
                     disabled: (
                         selector: '+*',
-                        opacity: 0.3
+                        opacity: 0.5
                     ),
                     checked: (
                         selector: '+*',
                         pseudo-elements: (
                             before: (
-                                border-color: my-color(orange-500),
-                                background: center / 60% no-repeat url('../medias/checkbox_check.svg')
+                                background: (
+                                    center/100% no-repeat url('../medias/icon_square.svg'),
+                                    60% 50%/50% no-repeat url('../medias/icon_check.svg')
+                                )
                             )
                         )
                     )
@@ -176,24 +174,22 @@ $briks-components-generic: (
                     before: (
                         selector: '+*',
                         content: '',
-                        border-width: 1px,
-                        border-style: solid,
-                        border-color: my-color(blue-800),
-                        background: white,
-                        border-radius: 100%
+                        background: center/100% no-repeat url('../medias/icon_circle.svg')
                     )
                 ),
                 pseudo-classes: (
                     disabled: (
                         selector: '+*',
-                        opacity: 0.3
+                        opacity: 0.5
                     ),
                     checked: (
                         selector: '+*',
                         pseudo-elements: (
                             before: (
-                                border-color: my-color(orange-500),
-                                background: radial-gradient(circle, my-color(orange-500) 37%, white 42%, white 100%)
+                                background: (
+                                    center/100% no-repeat url('../medias/icon_circle.svg'),
+                                    radial-gradient(circle, white 28%, transparent 32%, transparent 100%)
+                                )
                             )
                         )
                     )
