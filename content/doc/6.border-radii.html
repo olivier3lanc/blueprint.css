@@ -11,9 +11,10 @@ order: 170
     c-txt m-ff-lead-400 m-fs-2">
     {% for i in (0..4) %}
     <div class="
+        c-dis m-flex m-column m-gap-1
         c-skin m-bradtl-{{i}}
         c-dim m-pl-6 m-pt-6" style="border-left: 3px solid fuchsia; border-top: 3px solid fuchsia">
-        <strong class="c-txt m-ff-lead-700">Border radius {{i}}</strong> <br>
-        var(--ita-border-radius-{{i}})
+        <strong class="c-txt m-ff-lead-700">Border radius {{i}}</strong>
+        <span>var(--ita-border-radius-{{i}})</span>
     </div>{% endfor %}
 </div>

@@ -214,6 +214,15 @@ $briks-fonts: (
         fallback:    'sans-serif', // Name of a websafe font family used as fallback
         weight:      700, // Recommended but optional font weight
     ),
+    sketch-5: ( // Your own font family name for the design system
+        type:        'local', // Sets the type
+        filename:    'ArchitectBlueprint', // Name of the font file w/o extension
+        name:        'ArchitectBlueprint', // The display name used for compilation, can be any string
+        path:        '../fonts/ArchitectBlueprint/', // Relative path to the file or remote URL
+        legacy:      false, // true means woff2 and woff, false means ttf+woff+svg
+        fallback:    'sans-serif', // Name of a websafe font family used as fallback
+        weight:      700, // Recommended but optional font weight
+    ),
     lead-400: ( // Your own font family name for the design system
         type:        'google', // Sets the font type
         name:        'Victor Mono', // The Google font name
@@ -389,15 +398,31 @@ Y88b  d88P 888  888 888  888 Y88b 888 Y88..88P Y88b 888 d88P      X88
     SHADOWS
 */
 $briks-shadows: (
-    1: inset 0px 0px 50vmin 0 black,
+    1: (
+        0.9px 2.1px 2.2px rgba(0, 0, 0, 0.056),
+        2.1px 5.1px 5.3px rgba(0, 0, 0, 0.081),
+        3.9px 9.5px 10px rgba(0, 0, 0, 0.1),
+        6.9px 17px 17.9px rgba(0, 0, 0, 0.119),
+        13px 31.8px 33.4px rgba(0, 0, 0, 0.144),
+        31px 76px 80px rgba(0, 0, 0, 0.2)
+    ),
     2: (
+        1.2px 3.1px 2.2px rgba(0, 0, 0, 0.09),
+        2.9px 7.4px 5.3px rgba(0, 0, 0, 0.129),
+        5.5px 14px 10px rgba(0, 0, 0, 0.16),
+        9.8px 25px 17.9px rgba(0, 0, 0, 0.191),
+        18.4px 46.8px 33.4px rgba(0, 0, 0, 0.23),
+        44px 112px 80px rgba(0, 0, 0, 0.32)
+    ),
+    3: (
         1.6px 2.9px 2.2px rgba(0, 0, 0, 0.141),
         3.8px 6.9px 5.3px rgba(0, 0, 0, 0.202),
         7.1px 13px 10px rgba(0, 0, 0, 0.25),
         12.7px 23.2px 17.9px rgba(0, 0, 0, 0.298),
         23.8px 43.4px 33.4px rgba(0, 0, 0, 0.359),
         57px 104px 80px rgba(0, 0, 0, 0.5)
-    )
+    ),
+    inset-1: inset 0px 0px 50vmin 0 black
 );
 $briks-backgrounds: (); // DEPRECATED
 $briks-keyframes: ();

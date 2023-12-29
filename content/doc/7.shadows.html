@@ -4,16 +4,22 @@ description: Shadows design tokens
 layout: libdoc/page-codemirror
 category: Design tokens
 order: 180
+shadows:
+    - "1"
+    - "2"
+    - "3"
+    - "inset-1"
 ---
 <div class="
     c-dis m-flex m-column m-gap-10
     c-dim m-p-10
-    c-txt m-ff-lead-400">
-    {% for i in (1..2) %}
+    c-txt m-ff-lead-400 m-fs-2">
+    {% for shadow_name in page.shadows %}
     <div class="
-        c-skin m-bs-{{i}} m-bc-blue-900
+        c-dis m-flex m-column m-gap-1
+        c-skin m-bs-{{shadow_name}} m-bg-white-stripes-1 m-brad-3
         c-dim m-p-6">
-        <strong class="c-txt m-ff-lead-700">Shadow {{i}}</strong> <br>
-        var(--ita-shadow-{{i}})
+        <strong class="c-txt m-ff-lead-700">Shadow {{shadow_name}}</strong>
+        <span>var(--ita-shadow-{{shadow_name}})</span>
     </div>{% endfor %}
 </div>

@@ -12,7 +12,7 @@
 body {
     color: white;
     background-color: var(--bp-background-color);
-    box-shadow: inset 0px 0px 50vmin 0 black;
+    box-shadow: var(--ita-shadow-inset-1);
     min-height: 100vh;
     background-image:
         linear-gradient(var(--bp-groups-bounds-color) var(--bp-groups-line-width), transparent var(--bp-groups-line-width)),

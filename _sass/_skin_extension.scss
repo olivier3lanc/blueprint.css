@@ -30,11 +30,53 @@ $briks-components-generic: (
         modifiers: (
 
             // BACKGROUND
-            bg-search-left: (
-                background: left my-spacing(3) top 50% / my-font-size(6) no-repeat url('../medias/search_line.svg')
+            bg-white-stripes-1: (
+                background: center/calc(100% - 2px) calc(100% - 3px) no-repeat url("../medias/stripes_white_20.svg")
             ),
-            bg-select: (
-                background: right my-spacing(4) top 50% / my-font-size(2) no-repeat white url('../medias/chevron_down.svg')
+            bg-white-stripes-2: (
+                background: center/calc(100% - 2px) calc(100% - 3px) no-repeat url("../medias/stripes_white_40.svg")
+            ),
+            bg-white-stripes-3: (
+                background: center/calc(100% - 2px) calc(100% - 3px) no-repeat url("../medias/stripes_white_60.svg")
+            ),
+            bg-white-stripes-4: (
+                background: center/calc(100% - 2px) calc(100% - 3px) no-repeat url("../medias/stripes_white_80.svg")
+            ),
+            bg-white-stripes-5: (
+                background: center/calc(100% - 2px) calc(100% - 3px) no-repeat url("../medias/stripes_white_100.svg")
+            ),
+
+            // BORDER STYLES
+            bstyle-dashed: (
+                border-style: dashed
+            ),
+            btstyle-dashed: (
+                border-top-style: dashed
+            ),
+            brstyle-dashed: (
+                border-right-style: dashed
+            ),
+            bbstyle-dashed: (
+                border-bottom-style: dashed
+            ),
+            blstyle-dashed: (
+                border-left-style: dashed
+            ),
+
+            bstyle-dotted: (
+                border-style: dotted
+            ),
+            btstyle-dotted: (
+                border-top-style: dotted
+            ),
+            brstyle-dotted: (
+                border-right-style: dotted
+            ),
+            bbstyle-dotted: (
+                border-bottom-style: dotted
+            ),
+            blstyle-dotted: (
+                border-left-style: dotted
             ),
 
             // BORDER WIDTHS
@@ -83,6 +125,20 @@ $briks-components-generic: (
 
             bcolor-black: (
                 border-color: black
+            ),
+
+            // BORDER IMAGE
+            bimage-1: (
+                border-image: url('../medias/border_white.png') 100 / 10px,
+                border-style: solid
+            ),
+            bimage-2: (
+                border-image: url('../medias/border_white.png') 100 / 20px,
+                border-style: solid
+            ),
+            bimage-3: (
+                border-image: url('../medias/border_white.png') 100 / 30px,
+                border-style: solid
             ),
 
             // c-skin m-checkbox-1
@@ -283,6 +339,12 @@ $briks-components-generic: (
             ),
             bs-2: (
                 box-shadow: my-shadow(2)
+            ),
+            bs-3: (
+                box-shadow: my-shadow(3)
+            ),
+            bs-inset-1: (
+                box-shadow: my-shadow(inset-1)
             )
         )
     )

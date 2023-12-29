@@ -67,6 +67,10 @@ $briks-components-generic: (
                 font-family: my-font-family(sketch-4),
                 font-weight: 700
             ),
+            ff-sketch-5: (
+                font-family: my-font-family(sketch-5),
+                font-weight: 700
+            ),
             ff-lead-400: (
                 font-family: my-font-family(lead-400),
                 font-weight: 300
@@ -75,6 +79,17 @@ $briks-components-generic: (
                 font-family: my-font-family(lead-700),
                 font-weight: 700
             ),
+            // TEXT SHADOWS
+            ts-1: (
+                text-shadow: (
+                    1px 1px 2px var(--ita-color-blue-900),
+                    -1px -1px 2px var(--ita-color-blue-900),
+                    0px 1px 2px var(--ita-color-blue-900),
+                    1px 0px 2px var(--ita-color-blue-900),
+                    0px -1px 2px var(--ita-color-blue-900),
+                    -1px 0px 2px var(--ita-color-blue-900)
+                )
+            )
         )
     )
 );

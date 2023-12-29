@@ -12,9 +12,9 @@ order: 150
     {% for i in (0..10) reversed %}
     <div>
         <div class="c-dim m-pt-{{i}}" style="background-color: fuchsia"></div>
-        <div class="">
-            <strong class="c-txt m-ff-lead-700">Spacing {{i}}</strong>  <br>
-            var(--ita-spacing-{{i}})
+        <div class="c-dis m-flex m-column m-gap-1">
+            <strong class="c-txt m-ff-lead-700">Spacing {{i}}</strong>
+            <span>var(--ita-spacing-{{i}})</span>
         </div>
     </div>{% endfor %}
 </div>
