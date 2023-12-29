@@ -195,6 +195,36 @@ $briks-components-generic: (
                     )
                 )
             ),
+
+            color-scheme-1: (
+                color: white,
+                background-color: rgba(0,0,0,0.2),
+                border-image: url('../medias/border_white.png') 100 / 30px,
+                pseudo-classes: (
+                    hover: (
+                        background-color: rgba(0,0,0,0.3)
+                    ),
+                    focus: (
+                        outline: none,
+                        border-image: url('../medias/border_white.png') 100 / 10px,
+                        border-style: solid,
+                        background-color: rgba(0,0,0,0.3)
+                    ),
+                    required: (
+                        selector: '+label',
+                        pseudo-elements: (
+                            after: (
+                                content: " *",
+                                color: red
+                            )
+                        )
+                    ),
+                    disabled: (
+                        opacity: 0.5
+                    )
+                )
+            ),
+
             // c-skin m-disabled
             disabled: (
                 pointer-events: none,

@@ -6,18 +6,20 @@ category: Formulaires
 order: 500
 ---
 <form class="
-    c-dim m-p-10
-    c-skin m-bc-blue-200">
+    c-dis m-flex m-main-center
+    c-dim m-p-10">
+
     <fieldset class="
-        c-dis m-flex m-column m-gap-7 m-cross-start
-        c-skin m-bwidth-1 m-bstyle-solid m-bcolor-blue-500 m-brad-1 
-        c-txt m-fs-5 m-ff-lead-400
-        c-dim m-p-6 m-m-auto m-mt-12"
-        style="max-width: 40ch;">
+        c-dis m-flex m-column m-gap-8 m-cross-start
+        c-dim m-p-10
+        c-txt m-ff-lead-400
+        c-skin m-bimage-2 m-bs-1"
+        style="max-width: 70ch">
         <legend class="
-            c-skin m-c-primary-500 
-            c-txt m-fs-3">
-            Liste d'inputs
+            c-dim m-pl-2 m-pr-2 m-pt-1 m-pb-1
+            c-txt m-ff-sketch-2 m-fs-4
+            c-skin m-bimage-1 m-bg-white-stripes-2 m-bc-black">
+            Input form list
         </legend>
         <!-- type="text" -->
         <div class="
@@ -27,17 +29,16 @@ order: 500
                 id="id_102"
                 value=""
                 class="
-                c-form
-                c-dim m-pt-3 m-pr-4 m-pb-3 m-pl-4 
-                c-txt m-ff-lead-400 m-fs-3
-                c-skin m-bwidth-1 m-bstyle-solid m-color-scheme-1 m-brad-2 m-transition-1"
+                c-dim m-p-4
+                c-txt m-ff-lead-700 m-fs-3
+                c-skin m-color-scheme-1 m-transition-1"
                 placeholder="Placeholder"
                 required>
             <label for="id_102"
                 class="
                 c-dis m-flex
                 c-dim m-order--1 m-mb-1
-                c-txt m-fs-2 m-ff-lead-400">
+                c-txt m-fs-2 m-ff-lead-700">
                 Simple input text
             </label>
         </div>
@@ -50,9 +51,9 @@ order: 500
                 id="id_1615"
                 value=""
                 class="
-                c-dim m-pt-3 m-pr-7 m-pb-3 m-pl-8
-                c-txt m-ff-lead-400 m-fs-3
-                c-skin m-bwidth-1 m-bstyle-solid m-color-scheme-1 m-brad-2 m-transition-1"
+                c-dim m-pt-4 m-pb-4 m-pl-8 m-pr-8
+                c-txt m-ff-lead-700 m-fs-3
+                c-skin m-color-scheme-1 m-transition-1"
                 placeholder="Placeholder"
                 required>
             <label for="id_1615"
@@ -61,22 +62,22 @@ order: 500
                 c-pos m-absolute m-bottom-100 m-left-0
                 c-dim m-pb-1
                 c-txt m-fs-2 m-ff-lead-400">
-                Avec label et icônes
+                With label and icons
             </label>
-            <span class="icon-location_line
+            <span class="icon-search
                 c-dis m-flex m-main-center m-cross-center
                 c-pos m-absolute m-left-0
                 c-dim m-pl-3 m-h-100
-                c-txt m-fs-6
-                c-skin m-c-orange-500"></span> 
+                c-txt m-fs-4
+                c-skin m-c-white"></span> 
             <a  href="#!"
                 class="
                 c-dis m-flex m-main-center m-cross-center
                 c-pos m-absolute m-right-0
                 c-dim m-pr-3 m-h-100
                 c-txt m-fs-4 m-td-none
-                c-skin m-c-blue-900">
-                <span class="icon-close_line"></span>
+                c-skin m-c-white">
+                <span class="icon-close"></span>
             </a> 
         </div>
 
@@ -88,10 +89,10 @@ order: 500
                 id="id_1616"
                 value=""
                 class="
-                c-dim m-pt-3 m-pr-7 m-pb-3 m-pl-8
-                c-txt m-ff-lead-400 m-fs-3
-                c-skin m-bwidth-1 m-bstyle-solid m-color-scheme-1 m-brad-2 m-transition-1"
-                placeholder="Sans label avec icônes">
+                c-dim m-p-4 m-pr-8
+                c-txt m-ff-lead-700 m-fs-3
+                c-skin m-color-scheme-1 m-transition-1"
+                placeholder="Without label with icon">
             <span class="icon-location_line
                 c-dis m-flex m-main-center m-cross-center
                 c-pos m-absolute m-left-0
@@ -104,16 +105,17 @@ order: 500
                 c-pos m-absolute m-right-0
                 c-dim m-pr-3 m-h-100
                 c-txt m-fs-4 m-td-none
-                c-skin m-c-blue-900">
-                <span class="icon-close_circle_line"></span>
+                c-skin m-c-white">
+                <span class="icon-info"></span>
             </a> 
         </div>
         <input type="reset" 
+            value="Reset"
             class="
             c-dis m-flex m-main-center m-cross-center m-gap-1 
-            c-dim m-w-12t m-p-5 m-pl-7 m-pr-7 
-            c-txt m-ff-lead-700 m-fs-3 m-td-none 
-            c-skin m-bcolor-blue-500 m-b-0 m-brad-1 m-transition-1">
+            c-dim m-p-5 m-w-100
+            c-txt m-ff-sketch-2 m-fs-4 m-ts-1
+            c-skin m-c-white m-bimage-2 m-bg-white-stripes-3 m-b-0 m-brad-3">
         
     </fieldset>
 </form>
