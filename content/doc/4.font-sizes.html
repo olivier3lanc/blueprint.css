@@ -1,14 +1,21 @@
 ---
-title: Tailles de fontes
-description: Design tokens des tailles de fontes
+title: Font sizes
+description: Font sizes design tokens
 layout: libdoc/page-codemirror
 category: Design tokens
 order: 140
 ---
 <div class="
-    briks-font-sizes
-    c-dim m-m-10
-    c-txt m-ff-lead-1 m-antialiased">
-    {% for i in (1..12) reversed %}
-    <p class="c-txt m-fs-{{i}} m-lh-1">Lorem Ipsum <br><code class="c-txt m-fs-4">var(--ita-font-size-{{i}})</code></p>{% endfor %}
+    c-dis m-flex m-column m-gap-10
+    c-dim m-p-10
+    c-txt m-ff-lead-400">
+    {% for i in (1..10) reversed %}
+    <div class="c-dis m-flex m-column m-gap-2">
+        <p class="
+            c-dim m-m-0
+            c-txt m-fs-{{i}} m-lh-1">
+            Lorem Ipsum
+        </p>
+        <code class="c-txt m-fs-2">var(--ita-font-size-{{i}})</code>
+    </div>{% endfor %}
 </div>

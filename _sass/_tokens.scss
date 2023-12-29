@@ -1,0 +1,405 @@
+/*
+888888b.           d8b 888
+888  "88b          Y8P 888
+888  .88P              888
+8888888K.  888d888 888 888  888 .d8888b
+888  "Y88b 888P"   888 888 .88P 88K
+888    888 888     888 888888K  "Y8888b.
+888   d88P 888     888 888 "88b      X88
+8888888P"  888     888 888  888  88888P'
+*/
+/*
+    CSS VARIABLES
+    Enable or disable CSS variables of Briks into :root
+    --{{ $briks-css-variables-prefix }}-{{ patternType }}-{{ patternName }}
+*/
+$briks-css-variables-enabled:           true;
+$briks-css-variables-prefix:            'ita-';
+/*
+    UNIT
+    The default unit used into the entire design system
+*/
+$briks-unit:                            'px';
+/*
+    COMPONENTS PREFIX
+    The prefix which preceeds every component name
+*/
+$briks-components-prefix:               'c-';
+/*
+    MODIFIERS PREFIX
+    The prefix which preceeds every modifier name
+*/
+$briks-modifiers-prefix:                'm-';
+/*
+    UTILITIES PREFIX
+    The prefix which preceeds every utility name
+*/
+$briks-utilities-prefix:                'u-';
+/*
+    RESPONSIVE PREFIX
+    The prefix which preceeds every screen size name
+*/
+$briks-responsive-prefix:               '--';
+/*
+    LUMINANCE METHOD
+    Sets the method for automatic color contrast calculation. Involved in briks-smart-contrast function.
+    Default is 3, possible values:
+    1: Weighted Euclidean Distance in 3D RGB Space http://alienryderflex.com/hsp.html
+    2: W3C recommandation https://www.w3.org/TR/AERT/#color-contrast
+    3: Luma sRGB https://en.wikipedia.org/wiki/Rec._709
+*/
+$briks-luminance-method:                3;
+/*
+    LUMINANCE THRESHOLD
+    Define the luminance threshold between light and dark. Float value between 0 and 1.
+    Float value between 0 and 1
+*/
+$briks-luminance-threshold:             0.5;
+
+/*
+.d8888b.           888
+d88P  Y88b          888
+888    888          888
+888         .d88b.  888  .d88b.  888d888 .d8888b
+888        d88""88b 888 d88""88b 888P"   88K
+888    888 888  888 888 888  888 888     "Y8888b.
+Y88b  d88P Y88..88P 888 Y88..88P 888          X88
+"Y8888P"   "Y88P"  888  "Y88P"  888      88888P'
+
+    COLORS
+    @type SASS map https://sass-lang.com/documentation/file.SASS_REFERENCE.html#maps
+    @format <COLOR_NAME>: <CSS_COLOR>
+*/
+$briks-colors: (
+    blue-100: #dadff5,
+    blue-200: #b3bfeb,
+    blue-300: #8ba1e0,
+    blue-400: #5d84d5,
+    blue-500: #0768c9,
+    blue-600: #0054b1,
+    blue-700: #004099,
+    blue-800: #002d81,
+    blue-900: #001c6a
+);
+/*
+ .d8888b.                                                           d8b
+d88P  Y88b                                                          Y8P
+Y88b.
+ "Y888b.    .d8888b 888d888 .d88b.   .d88b.  88888b.       .d8888b  888 88888888  .d88b.  .d8888b
+    "Y88b. d88P"    888P"  d8P  Y8b d8P  Y8b 888 "88b      88K      888    d88P  d8P  Y8b 88K
+      "888 888      888    88888888 88888888 888  888      "Y8888b. 888   d88P   88888888 "Y8888b.
+Y88b  d88P Y88b.    888    Y8b.     Y8b.     888  888           X88 888  d88P    Y8b.          X88
+ "Y8888P"   "Y8888P 888     "Y8888   "Y8888  888  888       88888P' 888 88888888  "Y8888   88888P'
+
+    @type SASS map https://sass-lang.com/documentation/file.SASS_REFERENCE.html#maps
+    @format <SCREEN_SIZE_NAME>: <NUMBER>
+
+    Sets the **break points** of your responsive design system.
+    Enter any amount of break point names and values to build your own screen sizes.
+    It is recommended to use semantic names, easy to remenber and to use,
+    they are used to name your CSS classes utilities.
+    `0` value defines the smallest screen size.
+
+    // Example
+    $briks-screen-sizes: (
+        mini: 0, // Use '0' to define the smallest screen size
+        medium: 500,
+        maxi: 800
+    );
+    SCREEN SIZES
+*/
+$briks-screen-sizes: (
+    xs: 0,
+    sm: 600,
+    md: 960,
+    lg: 1200,
+    xl: 1440
+);
+
+/*
+8888888888                888
+888                       888
+888                       888
+8888888  .d88b.  88888b.  888888 .d8888b
+888     d88""88b 888 "88b 888    88K
+888     888  888 888  888 888    "Y8888b.
+888     Y88..88P 888  888 Y88b.       X88
+888      "Y88P"  888  888  "Y888  88888P'
+
+    @type SASS map https://sass-lang.com/documentation/file.SASS_REFERENCE.html#maps
+    Fill the fonts assets informations for your design system. Supported font inclusions methods are:
+
+    ### Local or remote
+    // example
+    $briks-fonts: (
+        my-bold: ( // Your own font family name for the design system
+            type:        'local', // Sets the type
+            filename:    'montserrat-bold-webfont', // Name of the font file w/o extension
+            name:        'Montserrat Bold', // The display name used for compilation, can be any string
+            path:        '../fonts/', // Relative path to the file or remote URL
+            legacy:      false, // true means woff2 and woff, false means ttf+woff+svg
+            fallback:    'sans-serif', // Name of a websafe font family used as fallback
+            weight:      600, // Recommended but optional font weight
+        )
+    );
+
+    ### Google font
+    // example
+    $briks-fonts: (
+        my-light: ( // Your own font family name for the design system
+            type:        'google', // Sets the font type
+            name:        'Montserrat', // The Google font name
+            weight:      'Light', // Sets the weight of the font, leave empty '' for default weight
+            fallback:    'sans-serif' // Sets a web safe fallback font. Value can be any web safe font.
+        )
+    );
+
+    ### Websafe
+    // example
+    $briks-fonts: (
+        my-websafe: ( // Your own font family name for the design system
+            type:        'websafe', // Sets the font type
+            name:        'fantasy' // Sets the websafe font family name
+        )
+    );
+
+    ### May Help
+    https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight#common_weight_name_mapping
+    100 	Thin (Hairline)
+    200 	Extra Light (Ultra Light)
+    300 	Light
+    400 	Normal
+    500 	Medium
+    600 	Semi Bold (Demi Bold)
+    700 	Bold
+    800 	Extra Bold (Ultra Bold)
+    900 	Black (Heavy)
+
+    FONTS
+*/
+$briks-fonts: (
+    sketch-1: ( // Your own font family name for the design system
+        type:        'local', // Sets the type
+        filename:    'FFFTusj-Bold', // Name of the font file w/o extension
+        name:        'FFFTusj-Bold', // The display name used for compilation, can be any string
+        path:        '../fonts/FFFTusj-Bold/', // Relative path to the file or remote URL
+        legacy:      false, // true means woff2 and woff, false means ttf+woff+svg
+        fallback:    'sans-serif', // Name of a websafe font family used as fallback
+        weight:      700, // Recommended but optional font weight
+    ),
+    sketch-2: ( // Your own font family name for the design system
+        type:        'local', // Sets the type
+        filename:    'KGBrokenVesselsSketch', // Name of the font file w/o extension
+        name:        'KGBrokenVesselsSketch', // The display name used for compilation, can be any string
+        path:        '../fonts/KGBrokenVesselsSketch/', // Relative path to the file or remote URL
+        legacy:      false, // true means woff2 and woff, false means ttf+woff+svg
+        fallback:    'sans-serif', // Name of a websafe font family used as fallback
+        weight:      400, // Recommended but optional font weight
+    ),
+    sketch-3: ( // Your own font family name for the design system
+        type:        'local', // Sets the type
+        filename:    'Archistico-Normal', // Name of the font file w/o extension
+        name:        'Archistico-Normal', // The display name used for compilation, can be any string
+        path:        '../fonts/Archistico-Normal/', // Relative path to the file or remote URL
+        legacy:      false, // true means woff2 and woff, false means ttf+woff+svg
+        fallback:    'sans-serif', // Name of a websafe font family used as fallback
+        weight:      400, // Recommended but optional font weight
+    ),
+    sketch-4: ( // Your own font family name for the design system
+        type:        'local', // Sets the type
+        filename:    'Archistico-Bold', // Name of the font file w/o extension
+        name:        'Archistico-Bold', // The display name used for compilation, can be any string
+        path:        '../fonts/Archistico-Bold/', // Relative path to the file or remote URL
+        legacy:      false, // true means woff2 and woff, false means ttf+woff+svg
+        fallback:    'sans-serif', // Name of a websafe font family used as fallback
+        weight:      700, // Recommended but optional font weight
+    ),
+    lead-400: ( // Your own font family name for the design system
+        type:        'google', // Sets the font type
+        name:        'Victor Mono', // The Google font name
+        weight:      'Light', // Sets the weight of the font, leave empty '' for default weight
+        fallback:    'monospace' // Sets a web safe fallback font. Value can be any web safe font.
+    ),
+    lead-700: ( // Your own font family name for the design system
+        type:        'google', // Sets the font type
+        name:        'Victor Mono', // The Google font name
+        weight:      'Bold', // Sets the weight of the font, leave empty '' for default weight
+        fallback:    'monospace' // Sets a web safe fallback font. Value can be any web safe font.
+    )
+);
+/*
+    DO NOT EDIT BOOT
+*/
+@import 'briks/engine/boot';
+
+/*
+8888888888                888                  d8b
+888                       888                  Y8P
+888                       888
+8888888  .d88b.  88888b.  888888      .d8888b  888 88888888  .d88b.
+888     d88""88b 888 "88b 888         88K      888    d88P  d8P  Y8b
+888     888  888 888  888 888         "Y8888b. 888   d88P   88888888
+888     Y88..88P 888  888 Y88b.            X88 888  d88P    Y8b.
+888      "Y88P"  888  888  "Y888       88888P' 888 88888888  "Y8888
+
+    @type SASS map https://sass-lang.com/documentation/file.SASS_REFERENCE.html#maps
+    @format <FONT_SIZE_NAME>: <NUMBER>
+
+    Enter all the font sizes that are used in the design system.
+
+    // example
+    $briks-font-sizes: (
+        xs: 12,
+        sm: 16,
+        md: 20,
+        xl: 40
+    );
+    FONT SIZES
+*/
+$briks-font-sizes: (
+    10: 96,
+    9: 80,
+    8: 64,
+    7: 48,
+    6: 36,
+    5: 28,
+    4: 20,
+    3: 16,
+    2: 13,
+    1: 10
+);
+$briks-typography: (); // DO NOT USE, DEPRECATED
+
+/*
+ .d8888b.                             d8b
+d88P  Y88b                            Y8P
+Y88b.
+ "Y888b.   88888b.   8888b.   .d8888b 888 88888b.   .d88b.  .d8888b
+    "Y88b. 888 "88b     "88b d88P"    888 888 "88b d88P"88b 88K
+      "888 888  888 .d888888 888      888 888  888 888  888 "Y8888b.
+Y88b  d88P 888 d88P 888  888 Y88b.    888 888  888 Y88b 888      X88
+ "Y8888P"  88888P"  "Y888888  "Y8888P 888 888  888  "Y88888  88888P'
+           888                                          888
+           888                                     Y8b d88P
+           888                                      "Y88P"
+
+    @type SASS map https://sass-lang.com/documentation/file.SASS_REFERENCE.html#maps
+    @format <SPACING_NAME>: <NUMBER>
+
+    Enter all the spacings that will be used into your project.
+    Spacings are used in margings, paddings, horizontal and vertical positionings like top, right, bottom, left.
+
+    // Example
+    $briks-spacings: (
+        xs: 8,
+        sm: 12,
+        md: 18,
+        lg: 26
+    );
+    SPACINGS
+*/
+$briks-spacings: (
+    10: 72,
+    9: 56,
+    8: 40,
+    7: 32,
+    6: 24,
+    5: 20,
+    4: 16,
+    3: 12,
+    2: 8,
+    1: 4,
+);
+
+/*
+888888b.                        888
+888  "88b                       888
+888  .88P                       888
+8888888K.   .d88b.  888d888 .d88888  .d88b.  888d888 .d8888b
+888  "Y88b d88""88b 888P"  d88" 888 d8P  Y8b 888P"   88K
+888    888 888  888 888    888  888 88888888 888     "Y8888b.
+888   d88P Y88..88P 888    Y88b 888 Y8b.     888          X88
+8888888P"   "Y88P"  888     "Y88888  "Y8888  888      88888P'
+
+    @type SASS map https://sass-lang.com/documentation/file.SASS_REFERENCE.html#maps
+    @format <BORDER_NAME>: <CSS_BORDER_SHORTHAND>
+
+    * Use function `my-color(yourColorName)` from $briks-colors to apply your own color.
+
+    // example
+    $briks-borders: (
+        light: 1px solid my-color(myColorName), // With my-color() function
+        dark: 2px dashed green // Custom color
+    );
+    BORDERS
+*/
+$briks-borders: ();
+
+
+/*
+888888b.                        888                                            888 d8b
+888  "88b                       888                                            888 Y8P
+888  .88P                       888                                            888
+8888888K.   .d88b.  888d888 .d88888  .d88b.  888d888      888d888 8888b.   .d88888 888 888  888 .d8888b
+888  "Y88b d88""88b 888P"  d88" 888 d8P  Y8b 888P"        888P"      "88b d88" 888 888 888  888 88K
+888    888 888  888 888    888  888 88888888 888          888    .d888888 888  888 888 888  888 "Y8888b.
+888   d88P Y88..88P 888    Y88b 888 Y8b.     888          888    888  888 Y88b 888 888 Y88b 888      X88
+8888888P"   "Y88P"  888     "Y88888  "Y8888  888          888    "Y888888  "Y88888 888  "Y88888  88888P'
+
+    @type SASS map https://sass-lang.com/documentation/file.SASS_REFERENCE.html#maps
+    @format <BORDER_RADIUS_NAME>: <NUMBER>
+
+    Enter your border radius for your design system.
+
+    // example
+    $briks-border-radius: (
+        min: 2,
+        max: 30
+    );
+    BORDER RADIUS
+*/
+$briks-border-radius: (
+    1: 4,
+    2: 8,
+    3: 12,
+    4: 128
+);
+/*
+.d8888b.  888                    888
+d88P  Y88b 888                    888
+Y88b.      888                    888
+ "Y888b.   88888b.   8888b.   .d88888  .d88b.  888  888  888 .d8888b
+    "Y88b. 888 "88b     "88b d88" 888 d88""88b 888  888  888 88K
+      "888 888  888 .d888888 888  888 888  888 888  888  888 "Y8888b.
+Y88b  d88P 888  888 888  888 Y88b 888 Y88..88P Y88b 888 d88P      X88
+ "Y8888P"  888  888 "Y888888  "Y88888  "Y88P"   "Y8888888P"   88888P'
+
+    @type SASS map https://sass-lang.com/documentation/file.SASS_REFERENCE.html#maps
+    @format <BOX_SHADOW_NAME>: <CSS_BOX_SHADOW>
+
+    Enter your [box shadows](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) for your design system.
+
+    * Use function `my-color(yourColorName)` from [$briks-colors](#Colors) to apply your own color.
+
+    // example
+    $briks-shadows: (
+        light: 0px 0px 10px 0px my-color(yourColorName), // With my-color() function
+        strong: 0px 2px 12px 0px rgba(black, 0.6) // Custom color
+    );
+    SHADOWS
+*/
+$briks-shadows: (
+    1: inset 0px 0px 50vmin 0 black,
+    2: (
+        1.6px 2.9px 2.2px rgba(0, 0, 0, 0.141),
+        3.8px 6.9px 5.3px rgba(0, 0, 0, 0.202),
+        7.1px 13px 10px rgba(0, 0, 0, 0.25),
+        12.7px 23.2px 17.9px rgba(0, 0, 0, 0.298),
+        23.8px 43.4px 33.4px rgba(0, 0, 0, 0.359),
+        57px 104px 80px rgba(0, 0, 0, 0.5)
+    )
+);
+$briks-backgrounds: (); // DEPRECATED
+$briks-keyframes: ();
+$briks-utilities: ();
+$briks-components-generic: ();

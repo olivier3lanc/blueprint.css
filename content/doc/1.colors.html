@@ -1,6 +1,6 @@
 ---
-title: Couleurs
-description: Design tokens des couleurs
+title: Colors
+description: Colors design tokens
 layout: libdoc/page-codemirror
 category: Design tokens
 order: 110
@@ -8,11 +8,9 @@ colors:
     - "blue"
 ---
 <div class="
-    briks-colors
     c-dis m-flex m-column m-gap-9
     c-dim m-p-10
-    c-txt m-ff-lead-1 m-fs-4"
-    style="background-color: ghostwhite">
+    c-txt m-ff-lead-400 m-fs-2">
     {% for color in page.colors %}
         <div class="c-dis m-flex m-column m-gap-7">
             {% for i in (1..9) %}
@@ -21,7 +19,8 @@ colors:
                 <div class="
                     c-skin m-bc-{{color}}-{{i}}00
                     c-dim m-p-4"></div>
-                <div>{{color}}-{{i}}00 <br>var(--ita-color-{{color}}-{{i}}00) <br><span></span></div>
+                <strong class="c-txt m-ff-lead-700">{{color}}-{{i}}00</strong> <br>
+                var(--ita-color-{{color}}-{{i}}00)
             </div>
             {% endfor %}
         </div>

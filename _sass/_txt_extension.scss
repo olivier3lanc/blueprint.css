@@ -20,12 +20,6 @@ $briks-components-generic: (
         // soit les deux
         modifiers: ( 
             // FONT SIZE
-            fs-12: (
-                font-size: my-font-size(12)
-            ),
-            fs-11: (
-                font-size: my-font-size(11)
-            ),
             fs-10: (
                 font-size: my-font-size(10)
             ),
@@ -65,12 +59,20 @@ $briks-components-generic: (
                 font-family: my-font-family(sketch-2),
                 font-weight: 400
             ),
-            ff-lead-1: (
-                font-family: my-font-family(lead-1),
+            ff-sketch-3: (
+                font-family: my-font-family(sketch-3),
+                font-weight: 400
+            ),
+            ff-sketch-4: (
+                font-family: my-font-family(sketch-4),
+                font-weight: 700
+            ),
+            ff-lead-400: (
+                font-family: my-font-family(lead-400),
                 font-weight: 300
             ),
-            ff-lead-2: (
-                font-family: my-font-family(lead-2),
+            ff-lead-700: (
+                font-family: my-font-family(lead-700),
                 font-weight: 700
             ),
         )

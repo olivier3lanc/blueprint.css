@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Archistico';
+    src: url('Archistico-Normal.woff2') format('woff2'),
+        url('Archistico-Normal.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

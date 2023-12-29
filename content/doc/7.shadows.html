@@ -1,20 +1,19 @@
 ---
-title: Élévations
-description: Design tokens des élévations
+title: Shadows
+description: Shadows design tokens
 layout: libdoc/page-codemirror
 category: Design tokens
 order: 180
 ---
 <div class="
+    c-dis m-flex m-column m-gap-10
     c-dim m-p-10
-    c-txt m-ff-lead-1">
+    c-txt m-ff-lead-400">
     {% for i in (1..2) %}
     <div class="
-        c-skin m-bs-{{i}} m-bc-white
-        c-dim m-p-6 m-mb-10
-        c-txt m-ff-lead-1">
-        Élévation {{i}} <br>
-        var(--ita-shadow-{{i}}) <br>
-        <span></span>
+        c-skin m-bs-{{i}} m-bc-blue-900
+        c-dim m-p-6">
+        <strong class="c-txt m-ff-lead-700">Shadow {{i}}</strong> <br>
+        var(--ita-shadow-{{i}})
     </div>{% endfor %}
 </div>

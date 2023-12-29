@@ -19,12 +19,6 @@ $briks-components-generic: (
         // soit ajoutent des propriétés
         // soit les deux
         modifiers: (
-            p-12: ( 
-                padding: my-spacing(12)
-            ),
-            p-11: ( 
-                padding: my-spacing(11)
-            ),
             p-10: (
                 padding: my-spacing(10)
             ),
@@ -57,12 +51,6 @@ $briks-components-generic: (
             ),
             p-0: (
                 padding: 0
-            ),
-            pt-12: (
-                padding-top: my-spacing(12)
-            ),
-            pt-11: (
-                padding-top: my-spacing(11)
             ),
             pt-10: (
                 padding-top: my-spacing(10)
@@ -97,12 +85,6 @@ $briks-components-generic: (
             pt-0: (
                 padding-top: 0
             ),
-            pr-12: (
-                padding-right: my-spacing(12)
-            ),
-            pr-11: (
-                padding-right: my-spacing(11)
-            ),
             pr-10: (
                 padding-right: my-spacing(10)
             ),
@@ -135,12 +117,6 @@ $briks-components-generic: (
             ),
             pr-0: (
                 padding-right: 0
-            ),
-            pb-12: (
-                padding-bottom: my-spacing(12)
-            ),
-            pb-11: (
-                padding-bottom: my-spacing(11)
             ),
             pb-10: (
                 padding-bottom: my-spacing(10)
@@ -175,12 +151,6 @@ $briks-components-generic: (
             pb-0: (
                 padding-bottom: 0
             ),
-            pl-12: (
-                padding-left: my-spacing(12)
-            ),
-            pl-11: (
-                padding-left: my-spacing(11)
-            ),
             pl-10: (
                 padding-left: my-spacing(10)
             ),
@@ -213,12 +183,6 @@ $briks-components-generic: (
             ),
             pl-0: (
                 padding-left: 0
-            ),
-            m-12: (
-                margin: my-spacing(12)
-            ),
-            m-11: (
-                margin: my-spacing(11)
             ),
             m-10: (
                 margin: my-spacing(10)
@@ -253,12 +217,6 @@ $briks-components-generic: (
             m-0: (
                 margin: 0
             ),
-            mt-12: (
-                margin-top: my-spacing(12)
-            ),
-            mt-11: (
-                margin-top: my-spacing(11)
-            ),
             mt-10: (
                 margin-top: my-spacing(10)
             ),
@@ -291,12 +249,6 @@ $briks-components-generic: (
             ),
             mt-0: (
                 margin-top: 0
-            ),
-            mr-12: (
-                margin-right: my-spacing(12)
-            ),
-            mr-11: (
-                margin-right: my-spacing(11)
             ),
             mr-10: (
                 margin-right: my-spacing(10)
@@ -331,12 +283,6 @@ $briks-components-generic: (
             mr-0: (
                 margin-right: 0
             ),
-            mb-12: (
-                margin-bottom: my-spacing(12)
-            ),
-            mb-11: (
-                margin-bottom: my-spacing(11)
-            ),
             mb-10: (
                 margin-bottom: my-spacing(10)
             ),
@@ -369,12 +315,6 @@ $briks-components-generic: (
             ),
             mb-0: (
                 margin-bottom: 0
-            ),
-            ml-12: (
-                margin-left: my-spacing(12)
-            ),
-            ml-11: (
-                margin-left: my-spacing(11)
             ),
             ml-10: (
                 margin-left: my-spacing(10)

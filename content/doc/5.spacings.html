@@ -1,24 +1,20 @@
 ---
-title: Espacements
-description: Design tokens des espacements
+title: Spacings
+description: Spacings design tokens
 layout: libdoc/page-codemirror
 category: Design tokens
 order: 150
 ---
 <div class="
-    briks-spacings
-    c-dis m-flex m-column m-gap-9 m-cross-start
-    c-dim m-m-10
-    c-txt m-ff-lead-1 m-antialiased">
-    {% for i in (0..12) reversed %}
-    <div class="
-        c-dis m-flex
-        c-dim m-w-100 m-pt-{{i}}" style="background-color: fuchsia">
-        <div class="
-            c-dim m-w-100
-            c-txt m-ff-mono
-            c-skin m-bc-white">
-            Espacement {{i}} | var(--ita-spacing-{{i}}) | <span></span>
+    c-dis m-flex m-column m-gap-10
+    c-dim m-p-10
+    c-txt m-ff-lead-400 m-fs-2">
+    {% for i in (0..10) reversed %}
+    <div>
+        <div class="c-dim m-pt-{{i}}" style="background-color: fuchsia"></div>
+        <div class="">
+            <strong class="c-txt m-ff-lead-700">Spacing {{i}}</strong>  <br>
+            var(--ita-spacing-{{i}})
         </div>
     </div>{% endfor %}
 </div>
