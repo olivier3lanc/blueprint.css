@@ -6,26 +6,42 @@ category: Design tokens
 order: 110
 colors:
     - "blue"
+    - "black"
+    - "white"
+special_colors:
+    - "black"
+    - "white"
 ---
-<div class="
+<h1 class="
+    c-dim m-m-0 m-p-10 m-pb-0
+    c-txt m-ff-sketch-1 m-fs-8">
+    Colors
+</h1>
+<ul class="
     c-dis m-flex m-column m-gap-9
-    c-dim m-p-10
-    c-txt m-ff-lead-400 m-fs-2">
+    c-dim m-p-10 m-m-0
+    c-txt m-ff-lead-400 m-fs-2
+    c-skin m-ls-none">
     {% for color in page.colors %}
-        <div class="c-dis m-flex m-column m-gap-7">
+        <li class="c-dis m-flex m-column m-gap-7">
             {% for i in (1..9) %}
             <div class="
                 c-dis m-flex m-column m-gap-1
                 c-dim m-p-4
                 c-skin m-bimage-1 m-bg-white-stripes-1 m-bs-1">
                 <div class="
-                    c-skin m-bc-{{color}}-{{i}}00
-                    c-dim m-p-4
-                    c-skin m-brad-1"></div>
+                    c-pos m-relative
+                    c-dim m-p-4 m-o-hidden
+                    c-skin m-bg-damier m-brad-1">
+                    <div class="
+                        c-pos m-absolute m-top-0 m-left-0
+                        c-dim m-w-100 m-h-100
+                        c-skin m-bc-{{color}}-{{i}}00"></div>
+                </div>
                 <strong class="c-txt m-ff-lead-700">{{color}}-{{i}}00</strong>
                 <span>var(--ita-color-{{color}}-{{i}}00)</span>
             </div>
             {% endfor %}
-        </div>
+        </li>
     {% endfor %}
-</div>
+</ul>

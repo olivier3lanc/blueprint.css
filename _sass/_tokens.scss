@@ -71,15 +71,35 @@ Y88b  d88P Y88..88P 888 Y88..88P 888          X88
     @format <COLOR_NAME>: <CSS_COLOR>
 */
 $briks-colors: (
+    white-100: rgba(255,255,255,0.1),
+    white-200: rgba(255,255,255,0.2),
+    white-300: rgba(255,255,255,0.3),
+    white-400: rgba(255,255,255,0.4),
+    white-500: rgba(255,255,255,0.5),
+    white-600: rgba(255,255,255,0.62),
+    white-700: rgba(255,255,255,0.74),
+    white-800: rgba(255,255,255,0.88),
+    white-900: rgba(255,255,255,1),
+
+    black-100: rgba(0,0,0,0.1),
+    black-200: rgba(0,0,0,0.2),
+    black-300: rgba(0,0,0,0.3),
+    black-400: rgba(0,0,0,0.4),
+    black-500: rgba(0,0,0,0.5),
+    black-600: rgba(0,0,0,0.62),
+    black-700: rgba(0,0,0,0.74),
+    black-800: rgba(0,0,0,0.88),
+    black-900: rgba(0,0,0,1),
+
     blue-100: #dadff5,
     blue-200: #b3bfeb,
     blue-300: #8ba1e0,
     blue-400: #5d84d5,
     blue-500: #0768c9,
     blue-600: #0054b1,
-    blue-700: #004099,
-    blue-800: #002d81,
-    blue-900: #001c6a
+    blue-700: #0d4491,
+    blue-800: #12377d,
+    blue-900: #16295d
 );
 /*
  .d8888b.                                                           d8b

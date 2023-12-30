@@ -46,6 +46,10 @@ $briks-components-generic: (
                 background: center/calc(100% - 2px) calc(100% - 3px) no-repeat url("../medias/stripes_white_100.svg")
             ),
 
+            bg-damier: (
+                background: url("../medias/damier.svg")
+            ),
+
             // BORDER STYLES
             bstyle-dashed: (
                 border-style: dashed
@@ -118,13 +122,59 @@ $briks-components-generic: (
             bcolor-blue-900: (
                 border-color: my-color(blue-900)
             ),
-
-            bcolor-white: (
-                border-color: white
+            bcolor-black-100: (
+                border-color: my-color(black-100)
             ),
-
-            bcolor-black: (
-                border-color: black
+            bcolor-black-200: (
+                border-color: my-color(black-200)
+            ),
+            bcolor-black-300: (
+                border-color: my-color(black-300)
+            ),
+            bcolor-black-400: (
+                border-color: my-color(black-400)
+            ),
+            bcolor-black-500: (
+                border-color: my-color(black-500)
+            ),
+            bcolor-black-600: (
+                border-color: my-color(black-600)
+            ),
+            bcolor-black-700: (
+                border-color: my-color(black-700)
+            ),
+            bcolor-black-800: (
+                border-color: my-color(black-800)
+            ),
+            bcolor-black-900: (
+                border-color: my-color(black-900)
+            ),
+            bcolor-white-100: (
+                border-color: my-color(white-100)
+            ),
+            bcolor-white-200: (
+                border-color: my-color(white-200)
+            ),
+            bcolor-white-300: (
+                border-color: my-color(white-300)
+            ),
+            bcolor-white-400: (
+                border-color: my-color(white-400)
+            ),
+            bcolor-white-500: (
+                border-color: my-color(white-500)
+            ),
+            bcolor-white-600: (
+                border-color: my-color(white-600)
+            ),
+            bcolor-white-700: (
+                border-color: my-color(white-700)
+            ),
+            bcolor-white-800: (
+                border-color: my-color(white-800)
+            ),
+            bcolor-white-900: (
+                border-color: my-color(white-900)
             ),
 
             // BORDER IMAGE
@@ -161,7 +211,7 @@ $briks-components-generic: (
                             before: (
                                 background: (
                                     center/100% no-repeat url('../medias/icon_square.svg'),
-                                    60% 50%/50% no-repeat url('../medias/icon_check.svg')
+                                    60% 50%/40% no-repeat url('../medias/icon_check.svg')
                                 )
                             )
                         )
@@ -198,17 +248,17 @@ $briks-components-generic: (
 
             color-scheme-1: (
                 color: white,
-                background-color: rgba(0,0,0,0.2),
+                background-color: my-color(black-200),
                 border-image: url('../medias/border_white.png') 100 / 30px,
                 pseudo-classes: (
                     hover: (
-                        background-color: rgba(0,0,0,0.3)
+                        background-color: my-color(black-300)
                     ),
                     focus: (
                         outline: none,
                         border-image: url('../medias/border_white.png') 100 / 10px,
                         border-style: solid,
-                        background-color: rgba(0,0,0,0.3)
+                        background-color: my-color(black-300)
                     ),
                     required: (
                         selector: '+label',
@@ -225,12 +275,6 @@ $briks-components-generic: (
                 )
             ),
 
-            // c-skin m-disabled
-            disabled: (
-                pointer-events: none,
-                color: grey,
-                background-color: lightgrey
-            ),
             // COLORS
             c-blue-100: (
                 color: my-color(blue-100)
@@ -259,11 +303,59 @@ $briks-components-generic: (
             c-blue-900: (
                 color: my-color(blue-900)
             ),
-            c-white: (
-                color: white
+            c-black-100: (
+                color: my-color(black-100)
             ),
-            c-black: (
-                color: black
+            c-black-200: (
+                color: my-color(black-200)
+            ),
+            c-black-300: (
+                color: my-color(black-300)
+            ),
+            c-black-400: (
+                color: my-color(black-400)
+            ),
+            c-black-500: (
+                color: my-color(black-500)
+            ),
+            c-black-600: (
+                color: my-color(black-600)
+            ),
+            c-black-700: (
+                color: my-color(black-700)
+            ),
+            c-black-800: (
+                color: my-color(black-800)
+            ),
+            c-black-900: (
+                color: my-color(black-900)
+            ),
+            c-white-100: (
+                color: my-color(white-100)
+            ),
+            c-white-200: (
+                color: my-color(white-200)
+            ),
+            c-white-300: (
+                color: my-color(white-300)
+            ),
+            c-white-400: (
+                color: my-color(white-400)
+            ),
+            c-white-500: (
+                color: my-color(white-500)
+            ),
+            c-white-600: (
+                color: my-color(white-600)
+            ),
+            c-white-700: (
+                color: my-color(white-700)
+            ),
+            c-white-800: (
+                color: my-color(white-800)
+            ),
+            c-white-900: (
+                color: my-color(white-900)
             ),
             // BACKGROUND COLOR
             bc-blue-100: (
@@ -293,11 +385,59 @@ $briks-components-generic: (
             bc-blue-900: (
                 background-color: my-color(blue-900)
             ),
-            bc-white: (
-                background-color: white
+            bc-black-100: (
+                background-color: my-color(black-100)
             ),
-            bc-black: (
-                background-color: black
+            bc-black-200: (
+                background-color: my-color(black-200)
+            ),
+            bc-black-300: (
+                background-color: my-color(black-300)
+            ),
+            bc-black-400: (
+                background-color: my-color(black-400)
+            ),
+            bc-black-500: (
+                background-color: my-color(black-500)
+            ),
+            bc-black-600: (
+                background-color: my-color(black-600)
+            ),
+            bc-black-700: (
+                background-color: my-color(black-700)
+            ),
+            bc-black-800: (
+                background-color: my-color(black-800)
+            ),
+            bc-black-900: (
+                background-color: my-color(black-900)
+            ),
+            bc-white-100: (
+                background-color: my-color(white-100)
+            ),
+            bc-white-200: (
+                background-color: my-color(white-200)
+            ),
+            bc-white-300: (
+                background-color: my-color(white-300)
+            ),
+            bc-white-400: (
+                background-color: my-color(white-400)
+            ),
+            bc-white-500: (
+                background-color: my-color(white-500)
+            ),
+            bc-white-600: (
+                background-color: my-color(white-600)
+            ),
+            bc-white-700: (
+                background-color: my-color(white-700)
+            ),
+            bc-white-800: (
+                background-color: my-color(white-800)
+            ),
+            bc-white-900: (
+                background-color: my-color(white-900)
             ),
             brad-1: (
                 border-radius: my-border-radius(1)
